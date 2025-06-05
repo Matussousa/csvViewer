@@ -1,0 +1,144 @@
+
+.drop-container {
+    position: relative;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px dashed #555;
+    color: #444;
+    cursor: pointer;
+    transition: background .2s ease-in-out, border .2s ease-in-out;
+}
+  
+.drop-container:hover {
+    background: #eee;
+    border-color: #111;
+}
+  
+.drop-container:hover .drop-title {
+    color: #222;
+}
+  
+.drop-title {
+    color: #444;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    transition: color .2s ease-in-out;
+}
+
+input[type=file] {
+    font-weight:bold;
+    width: 350px;
+    max-width: 100%;
+    color:#777777;
+    padding: 5px;
+    border-radius: 10px;
+    border: 1px solid #555;
+    background-color:#ffff;
+  
+}
+  
+input[type=file]::file-selector-button {
+    border: 1px solid #555;
+    margin-right: 20px;
+    border: none;
+    box-shadow:inset 0px 1px 0px 0px #ffffff;
+    background:linear-gradient(to bottom, #ededed 5%, #dfdfdf 100%);
+    padding: 10px 20px;
+    border-radius: 10px;
+    color:#777777;
+    cursor: pointer;
+}
+  
+  
+input[type=file]::file-selector-button:active{
+    position:relative;
+    top:2px;
+}
+
+.inputFile {
+    margin: 15px;
+}
+
+.file-data {
+    height: 40px;
+    width: 450px;
+    margin: 20px;
+    background-color: #444;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #555;
+    background-color:#ffff;
+}
+
+.file-data input[type=file] {
+  display: none;
+}
+
+.cssbuttons-io-button {
+    width: 44px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: inherit;
+    font-weight: 100;
+    color: white;
+    background: #777777;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0px 0px 0px 1px #ccc;
+    transition-duration: 0.3s;
+  }
+
+  .cssbuttons-io-button .svgIcon {
+    width: 25px;
+    height: 20px;
+    transition-duration: 0.3s;
+  }
+
+  .svgIcon path {
+    fill: white;
+  }
+
+  .cssbuttons-io-button:hover {
+    width: 150px;
+    transition-duration: 0.3s;
+  }
+  
+  .cssbuttons-io-button:hover .svgIcon {
+    /* width: 20px; */
+    transition-duration: 0.1s;
+    display: none;
+    transform: translateX(-200%);
+  }
+  .cssbuttons-io-button::before {
+    position: absolute;
+    bottom: -20px;
+    content: "Upload Csv file";
+    color: white;
+    transition-duration: .3s;
+    font-size: 0px;
+  }
+
+  .cssbuttons-io-button:hover::before {
+    font-size: 15px;
+    opacity: 1;
+    bottom: unset;
+    /* transform: translateY(-30px); */
+    transition-duration: 0.3s;
+  }
+  
+  .cssbuttons-io-button:active {
+    box-shadow:inset 0px 1px 0px 0px #ffffff;
+    position:relative;
+    top:1px;
+  }
